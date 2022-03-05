@@ -377,8 +377,9 @@ def test_default_io_manager():
         == fs_asset_io_manager
     )
     assert (
-        group.resource_defs["io_manager"] == fs_asset_io_manager
-    )  # pylint: disable=comparison-with-callable
+        group.resource_defs["io_manager"]  # pylint: disable=comparison-with-callable
+        == fs_asset_io_manager
+    )
 
 
 def test_repo_with_multiple_asset_groups():
